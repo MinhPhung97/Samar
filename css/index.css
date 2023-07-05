@@ -1,3 +1,4 @@
+/* -------------------Default CSS-------------------------- */
 html,
 body {
   color: #636363;
@@ -18,7 +19,6 @@ body {
 
 * a {
   text-decoration: none;
-  /* display: block; */
 }
 
 * ul li {
@@ -53,8 +53,7 @@ body {
   margin-top: 115px;
 }
 
-/* Start header */
-
+/*----------------------------- Header -------------------------- */
 header {
   position: absolute;
   top: 0;
@@ -108,6 +107,11 @@ header {
   vertical-align: middle;
 }
 
+.header__svg {
+  display: none;
+  font-size: 28px;
+}
+
 @keyframes upToDown {
   49% {
     transform: translateY(-100%);
@@ -121,9 +125,7 @@ header {
   }
 }
 
-/* End header */
-
-/* Started carousel */
+/*--------------------- Carousel --------------------------- */
 .carousel {
   padding-top: 180px;
   background-image: url(../imgs/pic2.png);
@@ -193,11 +195,10 @@ header {
 }
 
 .right__banner img {
-  /* max-width: 100%; */
   display: block;
 }
 
-/* Start service */
+/*---------------------------- Service ----------------------------------- */
 .service {
   background-image: url(../imgs/bg2.png);
   background-position: top center;
@@ -236,7 +237,7 @@ header {
   color: #262626;
 }
 
-/* End service */
+/* ------------------ About us -------------------------------------------------- */
 .aboutUs {
   background-image: url(../imgs/bg15.png);
   background-position: center right;
@@ -283,10 +284,7 @@ header {
   vertical-align: middle;
 }
 
-/* End aboutUs */
-
-/* Start number */
-
+/*-------------------------------- Number ---------------------------------- */
 .number {
   background-image: url(../imgs/bg14.png);
   background-position: center;
@@ -330,8 +328,7 @@ header {
   color: #262626;
 }
 
-/* End number */
-
+/* ------------------------Feature -------------------------------- */
 .feature {
   background-image: url(../imgs/bg2.png);
   background-position: center;
@@ -434,10 +431,7 @@ header {
   }
 }
 
-/* End feature */
-
-/* Start portfolio */
-
+/*--------------------------------- Portfolio ----------------------------------- */
 .portfolio {
   background-image: url(../imgs/bg17.png);
   background-size: cover;
@@ -555,10 +549,7 @@ header {
   opacity: 1;
 }
 
-/* End portfolio */
-
-/* Start plan */
-
+/*------------------------------- Plan ----------------------------------------*/
 .phan {
   background-image: url(../imgs/bg16.png);
   background-size: cover;
@@ -634,10 +625,7 @@ header {
   margin-right: 15px;
 }
 
-/* End plan */
-
-/* Start testimonial */
-
+/*------------------------------------- Testimonial -------------------------------- */
 .testimonial {
   text-align: center;
   background-image: url(../imgs/bg17.png);
@@ -816,10 +804,8 @@ header {
 .swiper-pagination-clickable .swiper-pagination-bullet {
   margin: 0 4px;
 }
-/* End testimonial */
 
-/* Blog */
-
+/*-------------------------------------- Blog ------------------------------------ */
 .blog {
   background-image: url(../imgs/bg16.png);
   background-size: cover;
@@ -895,10 +881,7 @@ header {
   margin-right: 20px;
 }
 
-/* End blog */
-
-/* Start footer */
-
+/*------------------------------------ Footer -------------------------------- */
 footer {
   background-image: url(../imgs/bg4.png);
   display: block;
@@ -1060,6 +1043,7 @@ footer {
 .copyright__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .copyright__left span {
@@ -1130,5 +1114,234 @@ footer::before {
 
   51% {
     opacity: 1;
+  }
+}
+
+/* --------------------------------Responsive --------------------------------- */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Header */
+  .header__content {
+    padding: 12px 20px;
+  }
+
+  .header__content nav ul {
+    display: none;
+  }
+
+  .btn-gradient button {
+    display: none;
+  }
+
+  .header__svg {
+    display: block;
+  }
+
+  /* Carousel */
+  .carousel__content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .carousel__left {
+    width: 100%;
+  }
+
+  /* Service */
+  .service__content {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+
+  /* Feature us */
+  .feature {
+    padding-left: 20px;
+  }
+
+  .feature__content {
+    align-items: center;
+  }
+
+  .title h2 {
+    font-size: 40px;
+  }
+
+  .feature__item i {
+    font-size: 50px;
+  }
+
+  .feature__bg {
+    padding: 10px;
+  }
+
+  /* Portfolio */
+  .portfolio__content {
+    padding: 0 20px;
+  }
+
+  /* Plan */
+  .plan__card {
+    padding: 0 20px;
+  }
+
+  .card__item {
+    padding: 30px 20px;
+  }
+
+  /* Blog */
+  .blog__content {
+    padding: 0 20px;
+  }
+
+  .owl-nav {
+    display: none;
+  }
+
+  .owl-dots {
+    margin-top: 20px;
+  }
+
+  /* Footer */
+  .footer__bottom {
+    padding: 70px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  /* Header */
+  .header__content {
+    padding: 12px 20px;
+  }
+
+  .header__content nav ul {
+    display: none;
+  }
+
+  .btn-gradient button {
+    display: none;
+  }
+
+  .header__svg {
+    display: block;
+  }
+
+  /* Carousel */
+  .carousel__content {
+    padding: 0 10px;
+  }
+
+  .carousel__content {
+    flex-direction: column;
+  }
+
+  .carousel__left {
+    width: 100%;
+  }
+
+  .carousel__right {
+    width: 100%;
+  }
+
+  /* Service */
+  .service__content {
+    padding: 0 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* About us */
+  .aboutUs__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content__left {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  .content__left img {
+    border-radius: 0;
+  }
+
+  .content__right {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .number__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .number .number__item {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Feature */
+  .feature__content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .feature__left,
+  .feature__right {
+    width: 100%;
+  }
+
+  .feature .feature__banner {
+    margin: 0;
+  }
+
+  /* Portfolio */
+  .portfolio__content {
+    gap: 10px;
+  }
+
+  /* Plan */
+  .plan__card {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
+
+  .owl-nav {
+    display: none;
+  }
+
+  .owl-dots {
+    margin-top: 20px;
+  }
+
+  /* Footer */
+  .footer__top {
+    padding: 10px;
+  }
+
+  .footer__text h2 {
+    font-size: 20px;
+  }
+
+  .footer__form {
+    width: unset;
+  }
+
+  .footer__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-template: 10px;
+    padding: 0 10px;
+  }
+
+  .footer__item {
+    width: 100%;
+  }
+
+  .carousel__right .right__banner {
+    margin-left: 0;
   }
 }
